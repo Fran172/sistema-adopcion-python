@@ -10,7 +10,7 @@ El sistema tiene tres módulos principales (más el menú en main):
 2. **usuario.py**: Clases para usuarios adoptantes y sus preferencias
 3. **perro.py**: Clases para perros y sus razas
 
-## Funcionalidades Principales
+## Clases
 
 ### `SistemaAdopcion`
 - Patrón Singleton para que el sistema tenga una única instancia
@@ -41,7 +41,7 @@ El sistema tiene tres módulos principales (más el menú en main):
 - Puede cambiar sus atributos
 - Asigna dueño y gestiona sus estados (disponible/reservado/adoptado)
 
-## Uso Básico
+## Uso de clases
 
 1. Crear una instancia del sistema:
    ```python
@@ -73,14 +73,35 @@ El sistema tiene tres módulos principales (más el menú en main):
    sistema.devolver(perro, usuario)  # Devolver
    ```
 
-## Validaciones
-
-El sistema valida (por demás):
-- Tipos de datos
-- Formatos correctos (DNI de 8 dígitos, email con '@')
-- Estados coherentes (no adoptar sin reserva previa)
-- Existencia de registros
-
-## Ejemplos
+### Ejemplos
 
 Los archivos incluyen al final una serie de ejemplos que pueden servir para probar y entender el funcionamiento de las clases.
+
+
+## Interfaz de Menú
+
+El archivo `main.py` contiene una interfaz de usuario para poder interactuar con el sistema desde la consola.
+
+### Características
+
+1. Funcionalidades:
+   - Registro de usuarios, perros y razas
+   - Edición de registros existentes
+   - Eliminación de registros
+   - Proceso completo de adopción (reserva, adopción y devolución)
+   - Búsqueda y filtrado de registros
+
+2. Módulos:
+   - `mostrar_*`: funciones para mostrar información
+   - `validar_*`: funciones para validar datos
+   - `solicitar_*`: funciones para solicitar entradas
+   - `elegir_*`: funciones para seleccionar entre opciones
+
+### Uso de menú
+
+1. Ejecutar el archivo `main.py`
+```bash
+python main.py
+```
+2. Ingresar números en consola para navegar por los menús.
+3. Seguir las instrucciones en pantalla para cada operación.
